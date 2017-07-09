@@ -1,0 +1,51 @@
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="20" vgap="30">
+
+    <padding><Insets top="10" right="25" bottom="10" left="25"/></padding>
+
+
+    <Text text="Time Sheet"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2"/>
+
+    <Label text="Enter your hourly rate:"
+           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <TextField
+            GridPane.columnIndex="1" GridPane.rowIndex="1"
+            fx:id="payRate"/>
+
+    <Label text="Enter the number of hours worked:"
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+    <TextField
+            GridPane.columnIndex="1" GridPane.rowIndex="2"
+            fx:id="hoursWorked"/>
+
+    <Label text="Enter truck profits:"
+           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+    <TextField
+            GridPane.columnIndex="1" GridPane.rowIndex="3"
+            fx:id="profitShare"/>
+
+    <HBox spacing="10" alignment="center"
+          GridPane.columnIndex="0" GridPane.rowIndex="4"
+           GridPane.columnSpan="2">
+        <Button text="Calculate"
+           fx:id="calculate" onAction="#handleButtonPress"/>
+    </HBox>
+
+    <Text fx:id="rate"
+          text="You made ......."
+          GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <Text fx:id="pro"
+          text="Your profit share is ...."
+          GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+</GridPane>
